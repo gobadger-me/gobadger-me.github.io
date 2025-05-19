@@ -37,7 +37,7 @@ onBeforeUnmount(() => {
 		scroll-threshold="10"
 		app
 	>
-		<v-img :src="logo" alt="GoBadger LLC" contain max-width="150" class="ml-4" />
+		<v-img :src="logo" alt="GoBadger LLC" contain max-width="150" class="ml-6" />
 		<v-spacer />
 		<v-btn text class="mx-2" v-for="link in navLinks" :key="link.text" :to="link.href">
 			{{ link.text }}
