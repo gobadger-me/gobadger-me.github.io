@@ -1,11 +1,8 @@
 <!-- ****************** Script ****************** -->
-<script setup lang="ts">
-</script>
+<script setup lang="ts"></script>
 
 <!-- ****************** Template **************** -->
-<template>
-</template>
+<template></template>
 
 <!-- ****************** Style ******************* -->
-<style scoped lang="scss">
-</style>
+<style scoped lang="scss"></style>

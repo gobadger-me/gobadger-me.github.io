@@ -1,8 +1,10 @@
 <script setup lang="ts">
+import NavigationBar from "@/components/NavigationBar.vue";
 </script>
 
 <template>
-	<v-app>
+	<v-app class="bg-background text-on-background">
+		<NavigationBar />
 		<router-view v-slot="{ Component }">
 			<transition name="fade" mode="out-in">
 				<component :is="Component" />
