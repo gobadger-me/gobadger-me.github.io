@@ -1,9 +1,15 @@
 <!-- ****************** Script ****************** -->
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import backgroundImage from "@/assets/img/background.png";
+</script>
 
 <!-- ****************** Template **************** -->
 <template>
-	<section class="hero-section d-flex align-center">
+	<!-- Hero -->
+	<section class="hero d-flex align-center">
+		<!-- Background image div -->
+		<div class="hero-bg" :style="{ backgroundImage: `url(${backgroundImage})` }"></div>
+
 		<div class="text-left px-6 py-16 ml-16" style="max-width: 800px">
 			<h1 class="text-h2 font-weight-bold mb-4 text-on-background">It starts with the Badge.</h1>
 			<p class="text-subtitle-1 mb-4 text-on-background">
@@ -21,8 +27,25 @@
 
 <!-- ****************** Style ******************* -->
 <style scoped lang="scss">
-.hero-section {
+.hero {
+	position: relative;
 	min-height: 80vh;
 	background-color: var(--v-theme-background);
+	overflow: hidden;
+
+	.hero-bg {
+		position: absolute;
+		inset: 0;
+		background-size: cover;
+		background-position: center;
+		filter: blur(2px);
+		opacity: 0.3;
+		z-index: 0;
+	}
+
+	> div:not(.hero-bg) {
+		position: relative;
+		z-index: 1;
+	}
 }
 </style>
