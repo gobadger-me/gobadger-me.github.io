@@ -1,5 +1,6 @@
 // Styling
 import "@/assets/css/main.css";
+import "@mdi/font/css/materialdesignicons.min.css";
 
 // Vuetify
 import "vuetify/styles";
