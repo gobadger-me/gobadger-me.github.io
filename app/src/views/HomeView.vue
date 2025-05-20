@@ -1,35 +1,27 @@
 <!-- ****************** Script ****************** -->
 <script setup lang="ts">
-import backgroundImage from "@/assets/img/background.png";
-
-function scrollToLearnMore() {
-	const el = document.getElementById("learn-more");
-	if (el) {
-		const offset = 70;
-		const top = el.getBoundingClientRect().top + window.pageYOffset - offset;
-		window.scrollTo({ top, behavior: "smooth" });
-	}
-}
+import Hero from "@/components/Hero.vue";
+import bgImg from "@/assets/img/background.png";
 </script>
 
 <!-- ****************** Template **************** -->
 <template>
-	<!-- Hero -->
-	<section class="hero d-flex align-center">
-		<div class="hero-bg" :style="{ backgroundImage: `url(${backgroundImage})` }"></div>
-		<div class="text-left px-6 py-16 ml-16" style="max-width: 800px">
-			<h1 class="text-h2 font-weight-bold mb-4 text-on-background">It starts with the Badge.</h1>
-			<p class="text-subtitle-1 mb-4 text-on-background">
-				Integrate in-person and online functions for a seamless event experience.
-			</p>
-			<p class="text-subtitle-1 mb-16 text-on-background">
+
+	<Hero
+		:bgImg="bgImg"
+		scrollTo="learn-more"
+		scrollToText="Learn More"
+		header="It starts with the Badge."
+	>
+		<template #subtitle>
+			<p class="mb-4">Integrate in-person and online functions for a seamless event experience.</p>
+			<p>
 				Manage registrations, incentivize and track engagement, build schedules —
 				<b>and so much more</b> — with ease. Badger handles the details, so you can focus on the
 				event.
 			</p>
-			<v-btn color="primary" size="large" @click="scrollToLearnMore"> Learn More </v-btn>
-		</div>
-	</section>
+		</template>
+	</Hero>
 
 	<!-- Problem & Solution -->
 	<section id="learn-more" class="py-16 px-6 text-center">
@@ -61,26 +53,4 @@ function scrollToLearnMore() {
 
 <!-- ****************** Style ******************* -->
 <style scoped lang="scss">
-.hero {
-	position: relative;
-	min-height: 80vh;
-	background-color: var(--v-theme-background);
-	overflow: hidden;
-	border-bottom: 1px solid white;
-
-	.hero-bg {
-		position: absolute;
-		inset: 0;
-		background-size: cover;
-		background-position: center;
-		filter: blur(2px);
-		opacity: 0.3;
-		z-index: 0;
-	}
-
-	> div:not(.hero-bg) {
-		position: relative;
-		z-index: 1;
-	}
-}
 </style>
