@@ -58,13 +58,27 @@ async function submitForm() {
 <template>
 	<div class="mx-8">
 		<v-container class="py-16" max-width="1200" style="height: 100vh">
-			<v-row class="fill-height" justify="space-between" style="gap: 48px; margin-top: 60px">
+			<v-row
+				class="fill-height"
+				justify="space-between"
+				style="gap: 48px; margin-top: clamp(60px, 10%, 10%)"
+			>
 				<!-- Left Text -->
 				<v-col cols="12" md="5" class="d-flex flex-column align-start">
 					<h1 class="text-h4 font-weight-bold mb-6">Contact</h1>
 					<p class="text-subtitle-1">
-						Have questions or want to learn more about how Badger can help your event? Fill out the
-						form and one of our team members will get back to you soon.
+						Have questions or want to learn more about how Badger can help your event? Please fill
+						out the contact form and one of our team members will get back to you soon.
+						Alternatively, you can reach us at
+						<a href="mailto:contact@gobadger.me">contact@gobadger.me</a>.
+					</p>
+					<p class="text-subtitle-1 mt-8">
+						Our team is based out of California. We are available from 7 AM to 11 PM every day,
+						including weekends.
+					</p>
+					<p class="text-subtitle-1 mt-8">
+						At this time, we are unfortunately unable to provide support for events outside of the
+						United States.
 					</p>
 				</v-col>
 
