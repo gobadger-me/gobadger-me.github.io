@@ -4,7 +4,7 @@ import { defineProps } from "vue";
 
 const props = defineProps({
 	bgImg: {
-		type: Object,
+		type: String,
 		default: null,
 	},
 	scrollToId: {
