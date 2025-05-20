@@ -1,6 +1,8 @@
 <!-- ****************** Script ****************** -->
 <script setup lang="ts">
 import Hero from "@/components/Hero.vue";
+import ProblemStatement from "@/components/ProblemStatement.vue";
+
 import bgImg from "@/assets/img/background.png";
 </script>
 
@@ -23,31 +25,33 @@ import bgImg from "@/assets/img/background.png";
 		</template>
 	</Hero>
 
-	<!-- Problem & Solution -->
-	<section id="learn-more" class="py-16 px-6 text-center">
-		<div class="mx-auto" style="max-width: 1000px">
-			<h2 class="text-h4 font-weight-bold mb-6">Events Are Complex. Badger Simplifies Them.</h2>
-			<p class="text-subtitle-1 mb-10">
-				Managing an event shouldn't mean juggling multiple tools, disjointed systems, and constant
-				stress. Badger brings everything under one roof—registration, engagement tracking,
-				scheduling, and more—so you can focus on delivering a great experience.
+	<ProblemStatement
+		header="Events Are Complex. Badger Simplifies Them."
+		lcolHeader="Without Badger"
+		rcolHeader="With Badger"
+	>
+		<template #subtitle>
+			<p>
+				Managing an event shouldn't mean juggling disconnected systems, stressed staff, and endless spreadsheets. Badger unifies registration, engagement tracking, attendance, scheduling, analytics, and so much more—all in one seamless platform. You can focus on creating a memorable event instead of managing chaos.
 			</p>
-		</div>
-		<v-row dense>
-			<v-col cols="12" md="6">
-				<v-card class="pa-6" outlined>
-					<h3 class="mb-2 font-weight-bold">Without Badger</h3>
-					<p class="text-body-2">Multiple tools, missed scans, manual work.</p>
-				</v-card>
-			</v-col>
-			<v-col cols="12" md="6">
-				<v-card class="pa-6" color="primary" dark>
-					<h3 class="mb-2 font-weight-bold">With Badger</h3>
-					<p class="text-body-2">Integrated, real-time, automatic tracking and engagement.</p>
-				</v-card>
-			</v-col>
-		</v-row>
-	</section>
+		</template>
+		<template #lcol>
+			<p>
+				Tracking attendance and engagement is clunky at best, nonexistent at worst, and almost always chaotic.
+				<br class="mb-4" />
+				You’re stuck relying on spreadsheets, paper sign-in forms, check-in staff, or systems that don’t talk to each other. Lines form as your staff has to look for names in lists, people fumble with QR codes, camera apps fail to scan, and every interaction becomes a bottleneck.
+				<br class="mb-4" />
+				It’s inefficient, error-prone, and drains your team’s time and energy.
+			</p>
+		</template>
+		<template #rcol>
+			<p>
+				Tap a card.
+				<br class="mb-4" />
+				It's done in 0.05 seconds (yes, really).
+			</p>
+		</template>
+	</ProblemStatement>
 
 </template>
 
