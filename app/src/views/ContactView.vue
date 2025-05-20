@@ -10,10 +10,47 @@ const form = ref({
 	message: "",
 });
 
-function submitForm() {
-	console.log("Form submitted:", form.value);
-	alert("Thanks for reaching out! We'll get back to you soon.");
-	form.value = { firstName: "", lastName: "", email: "", company: "", message: "" };
+const success = ref(false);
+const error = ref(false);
+
+// Note: this is NOT considered sensitive! This is considered public.
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/xwpozrky";
+
+async function submitForm() {
+	try {
+		const response = await fetch(FORMSPREE_ENDPOINT, {
+			method: "POST",
+			headers: {
+				Accept: "application/json",
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify({
+				firstName: form.value.firstName,
+				lastName: form.value.lastName,
+				email: form.value.email,
+				company: form.value.company,
+				message: form.value.message,
+			}),
+		});
+
+		if (response.ok) {
+			success.value = true;
+			error.value = false;
+			form.value = {
+				firstName: "",
+				lastName: "",
+				email: "",
+				company: "",
+				message: "",
+			};
+		} else {
+			throw new Error("Submission failed");
+		}
+	} catch (err) {
+		console.error(err);
+		success.value = false;
+		error.value = true;
+	}
 }
 </script>
 
@@ -21,7 +58,7 @@ function submitForm() {
 <template>
 	<div class="mx-8">
 		<v-container class="py-16" max-width="1200" style="height: 100vh">
-			<v-row class="fill-height" align="center" justify="space-between" style="gap: 48px">
+			<v-row class="fill-height" justify="space-between" style="gap: 48px; margin-top: 60px">
 				<!-- Left Text -->
 				<v-col cols="12" md="5" class="d-flex flex-column align-start">
 					<h1 class="text-h4 font-weight-bold mb-6">Contact</h1>
@@ -42,14 +79,17 @@ function submitForm() {
 								<v-text-field v-model="form.lastName" label="Last Name" required />
 							</v-col>
 						</v-row>
-
 						<v-text-field v-model="form.email" label="Email Address" type="email" required />
-
 						<v-text-field v-model="form.company" label="Company" />
-
 						<v-textarea v-model="form.message" label="Message" rows="5" required />
-
 						<v-btn color="primary" type="submit" class="mt-4" large>Submit</v-btn>
+
+						<v-alert v-if="success" type="success" class="mt-8">
+							Thanks! Your message has been sent.
+						</v-alert>
+						<v-alert v-if="error" type="error" class="mt-8">
+							Oops! Something went wrong. Please try again later.
+						</v-alert>
 					</v-form>
 				</v-col>
 			</v-row>
