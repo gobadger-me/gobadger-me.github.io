@@ -65,7 +65,7 @@ import bgImg from "@/assets/img/background.png";
 						<p>
 							Making announcements, managing a schedule, adapting to on-the-fly changes, and keeping
 							everyone on the same page is a complicated game of telephone, spreadsheets, and
-							crossed fingers. Communication is fragmented, and everyone is left guessing, leaving
+							crossed fingers. Communication is fragmented and everyone is left guessing, leaving
 							attendees frustrated and staff scrambling.
 						</p>
 					</template>
@@ -88,7 +88,7 @@ import bgImg from "@/assets/img/background.png";
 					<template #rcol>
 						<p>
 							Let Badger be your one-stop shop. Everything is done under one roof, simplifying your
-							procurement process and reducing the number of account managers you need to engage.
+							procurement process and reducing the number of vendors you need to engage.
 						</p>
 					</template>
 				</ProblemRow>
