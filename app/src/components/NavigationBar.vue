@@ -5,9 +5,9 @@ import { ref, onMounted, onBeforeUnmount } from "vue";
 
 const navLinks = [
 	{ text: "Home", href: "/" },
-	{ text: "Features", href: "/features" },
-	{ text: "Pricing", href: "/pricing" },
-	{ text: "About", href: "/about" },
+	//	{ text: "Features", href: "/features" },
+	//	{ text: "Pricing", href: "/pricing" },
+	//	{ text: "About", href: "/about" },
 ];
 
 const isScrolled = ref(false);
@@ -42,7 +42,7 @@ onBeforeUnmount(() => {
 		<v-btn text class="mx-2" v-for="link in navLinks" :key="link.text" :to="link.href">
 			{{ link.text }}
 		</v-btn>
-		<v-btn color="primary" class="ml-4 mr-6" rounded> Contact Sales </v-btn>
+		<v-btn color="primary" class="ml-4 mr-6" rounded to="/contact"> Get Started </v-btn>
 	</v-app-bar>
 </template>
 
