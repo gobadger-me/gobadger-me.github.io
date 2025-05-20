@@ -7,7 +7,7 @@ const props = defineProps({
 		type: Object,
 		default: null,
 	},
-	scrollTo: {
+	scrollToId: {
 		type: String,
 		default: null,
 	},
@@ -18,11 +18,11 @@ const props = defineProps({
 	header: {
 		type: String,
 		default: "Lorem Ipsum",
-	}
+	},
 });
 
 function scrollTo() {
-	const el = document.getElementById(props.scrollTo);
+	const el = document.getElementById(props.scrollToId);
 	if (el) {
 		const offset = 70;
 		const top = el.getBoundingClientRect().top + window.pageYOffset - offset;

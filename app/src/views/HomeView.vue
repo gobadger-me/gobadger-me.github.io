@@ -1,6 +1,6 @@
 <!-- ****************** Script ****************** -->
 <script setup lang="ts">
-import Hero from "@/components/Hero.vue";
+import HeroSection from "@/components/HeroSection.vue";
 import ProblemStatement from "@/components/ProblemStatement.vue";
 
 import bgImg from "@/assets/img/background.png";
@@ -8,10 +8,9 @@ import bgImg from "@/assets/img/background.png";
 
 <!-- ****************** Template **************** -->
 <template>
-
-	<Hero
+	<HeroSection
 		:bgImg="bgImg"
-		scrollTo="learn-more"
+		scrollToId="learn-more"
 		scrollToText="Learn More"
 		header="It starts with the Badge."
 	>
@@ -23,7 +22,7 @@ import bgImg from "@/assets/img/background.png";
 				event.
 			</p>
 		</template>
-	</Hero>
+	</HeroSection>
 
 	<ProblemStatement
 		header="Events Are Complex. Badger Simplifies Them."
@@ -32,14 +31,20 @@ import bgImg from "@/assets/img/background.png";
 	>
 		<template #subtitle>
 			<p>
-				Managing an event shouldn't mean juggling disconnected systems, stressed staff, and endless spreadsheets. Badger unifies registration, engagement tracking, attendance, scheduling, analytics, and so much more—all in one seamless platform. You can focus on creating a memorable event instead of managing chaos.
+				Managing an event shouldn't mean juggling disconnected systems, stressed staff, and endless
+				spreadsheets. Badger unifies registration, engagement tracking, attendance, scheduling,
+				analytics, and so much more—all in one seamless platform. You can focus on creating a
+				memorable event instead of managing chaos.
 			</p>
 		</template>
 		<template #lcol>
 			<p>
-				Tracking attendance and engagement is clunky at best, nonexistent at worst, and almost always chaotic.
+				Tracking attendance and engagement is clunky at best, nonexistent at worst, and almost
+				always chaotic.
 				<br class="mb-4" />
-				You’re stuck relying on spreadsheets, paper sign-in forms, check-in staff, or systems that don’t talk to each other. Lines form as your staff has to look for names in lists, people fumble with QR codes, camera apps fail to scan, and every interaction becomes a bottleneck.
+				You’re stuck relying on spreadsheets, paper sign-in forms, check-in staff, or systems that
+				don’t talk to each other. Lines form as your staff has to look for names in lists, people
+				fumble with QR codes, camera apps fail to scan, and every interaction becomes a bottleneck.
 				<br class="mb-4" />
 				It’s inefficient, error-prone, and drains your team’s time and energy.
 			</p>
@@ -52,9 +57,7 @@ import bgImg from "@/assets/img/background.png";
 			</p>
 		</template>
 	</ProblemStatement>
-
 </template>
 
 <!-- ****************** Style ******************* -->
-<style scoped lang="scss">
-</style>
+<style scoped lang="scss"></style>
