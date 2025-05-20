@@ -7,14 +7,6 @@ const props = defineProps({
 		type: String,
 		default: "Lorem Ipsum",
 	},
-	lcolHeader: {
-		type: String,
-		default: "Dolor Sit",
-	},
-	rcolHeader: {
-		type: String,
-		default: "Amet Consectetur",
-	},
 });
 </script>
 
@@ -25,20 +17,7 @@ const props = defineProps({
 			<h2 class="text-h4 font-weight-bold mb-6">{{ props.header }}</h2>
 			<slot name="subtitle" class="text-subtitle-1" />
 		</div>
-		<v-row dense>
-			<v-col cols="12" md="6">
-				<v-card class="pa-6" outlined>
-					<h3 class="mb-2 font-weight-bold">{{ props.lcolHeader }}</h3>
-					<slot name="lcol" class="text-body-2" />
-				</v-card>
-			</v-col>
-			<v-col cols="12" md="6">
-				<v-card class="pa-6" color="primary" dark>
-					<h3 class="mb-2 font-weight-bold">{{ props.rcolHeader }}</h3>
-					<slot name="rcol" class="text-body-2" />
-				</v-card>
-			</v-col>
-		</v-row>
+		<slot name="contents" />
 	</section>
 </template>
 
