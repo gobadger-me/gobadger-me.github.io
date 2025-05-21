@@ -46,9 +46,6 @@ const props = defineProps({
 <!-- ****************** Style ******************* -->
 <style scoped lang="scss">
 .cta-section {
-	background-color: var(--v-theme-surface);
-	border-radius: 16px;
-	margin: 4rem auto;
-	box-shadow: 0 2px 16px rgba(0, 0, 0, 0.05);
+	background-color: rgba(var(--v-theme-surface), 0.8);
 }
 </style>
