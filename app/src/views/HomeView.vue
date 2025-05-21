@@ -3,9 +3,13 @@
 import HeroSection from "@/components/HeroSection.vue";
 import ProblemStatement from "@/components/ProblemStatement.vue";
 import ProblemRow from "@/components/ProblemRow.vue";
+import FeatureBlock from "@/components/FeatureBlock.vue";
 import CallToAction from "@/components/CallToAction.vue";
 
 import bgImg from "@/assets/img/background.png";
+import emiBrowserImg from "@/assets/img/emi-browser.png";
+import bxScannerImg from "@/assets/img/bx-scanner.png";
+import besPreviewImg from "@/assets/img/bes-preview.jpg";
 </script>
 
 <!-- ****************** Template **************** -->
@@ -111,6 +115,46 @@ import bgImg from "@/assets/img/background.png";
 				</ProblemRow>
 			</template>
 		</ProblemStatement>
+
+		<!-- Feature Highlights -->
+		<FeatureBlock :image="emiBrowserImg" alt="Event Management Interface screenshot" reverse>
+			<h2 class="text-h5 font-weight-bold mb-2">Simple.</h2>
+			<p class="text-body-1">
+				Badger simplifies your staff experience through the Event Management Interface (EMI), a
+				user-friendly dashboard that puts everything you need at your fingertips.
+				<br class="mb-4" />
+				The EMI is just one interface into the Badger Web Core (BWC), the central engine that powers
+				Badger.
+				<br class="mb-4" />
+				Let us create your Event Live Page (ELP), a customized web page branded to your event's
+				specifications for your attendees to use. Simplify your attendees' experience into a single
+				platform, improving user experience.
+			</p>
+		</FeatureBlock>
+		<FeatureBlock :image="bxScannerImg" alt="Sample Image">
+			<h2 class="text-h5 font-weight-bold mb-2">Just Tap.</h2>
+			<p class="text-body-1">
+				Deploy our custom scanners anywhere. All you have to do is put it down and turn it on. Ditch
+				the drills, drywall, and cabling. Our scanners are rechargeably battery-powered, wireless,
+				and lightweight.
+				<br class="mb-4" />
+				Configure your scanners to work with your event's needs using the Event Management
+				Interface. Use them for check-in, attendance tracking, and more. Wherever you need them, we
+				can make it happen.
+				<br class="mb-4" />
+				When it's time for your users to check in, all they have to do is tap.
+			</p>
+		</FeatureBlock>
+		<FeatureBlock :image="besPreviewImg" alt="Sample Image" reverse>
+			<h2 class="text-h5 font-weight-bold mb-2">Real people. Real connections. Real value.</h2>
+			<p class="text-body-1">
+				Badger is more than just a tool; it's a platform that empowers you to create meaningful
+				connections. Forget the chaos, headaches, and stress of managing an event.
+				<br class="mb-4" />
+				Badger simplifies your event management experience so you can focus on what really matters:
+				people.
+			</p>
+		</FeatureBlock>
 
 		<!-- Call to Action -->
 		<CallToAction
