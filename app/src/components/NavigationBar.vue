@@ -37,7 +37,9 @@ onBeforeUnmount(() => {
 		scroll-threshold="10"
 		app
 	>
-		<v-img :src="logo" alt="GoBadger LLC" contain max-width="150" class="ml-6" />
+		<router-link to="/" class="ml-6 px-2 d-inline-block" style="max-width: 150px">
+			<img :src="logo" alt="GoBadger Logo" style="width: 100%" />
+		</router-link>
 		<v-spacer />
 		<v-btn text class="mx-2" v-for="link in navLinks" :key="link.text" :to="link.href">
 			{{ link.text }}
