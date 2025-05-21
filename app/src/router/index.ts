@@ -1,4 +1,5 @@
-import { createRouter, createWebHistory } from "vue-router";
+//import { createRouter, createWebHistory } from "vue-router";
+import { createRouter, createWebHashHistory } from "vue-router";
 import HomeView from "@/views/HomeView.vue";
 import ContactView from "@/views/ContactView.vue";
 import LegalTermsView from "@/views/LegalTermsView.vue";
@@ -7,7 +8,8 @@ import LegalAcceptableUseView from "@/views/LegalAcceptableUseView.vue";
 import LegalDisclaimerView from "@/views/LegalDisclaimerView.vue";
 
 const router = createRouter({
-	history: createWebHistory(import.meta.env.BASE_URL),
+//	history: createWebHistory(import.meta.env.BASE_URL),
+	history: createWebHashHistory(),
 	routes: [
 		{
 			path: "/",
