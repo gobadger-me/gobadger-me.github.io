@@ -3,6 +3,7 @@
 import HeroSection from "@/components/HeroSection.vue";
 import ProblemStatement from "@/components/ProblemStatement.vue";
 import ProblemRow from "@/components/ProblemRow.vue";
+import CallToAction from "@/components/CallToAction.vue";
 
 import bgImg from "@/assets/img/background.png";
 </script>
@@ -10,6 +11,7 @@ import bgImg from "@/assets/img/background.png";
 <!-- ****************** Template **************** -->
 <template>
 	<div>
+		<!-- Hero -->
 		<HeroSection
 			header="It starts with the Badge."
 			scrollToId="learn-more"
@@ -28,6 +30,7 @@ import bgImg from "@/assets/img/background.png";
 			</template>
 		</HeroSection>
 
+		<!-- Problem Statement -->
 		<ProblemStatement header="Events Are Complex. Badger Simplifies Them.">
 			<template #subtitle>
 				<p>
@@ -108,6 +111,14 @@ import bgImg from "@/assets/img/background.png";
 				</ProblemRow>
 			</template>
 		</ProblemStatement>
+
+		<!-- Call to Action -->
+		<CallToAction
+			header="Ready to Go Badger?"
+			subtitle="Let's make your next event unforgettable. Reach out and let's talk."
+			linkTo="/contact"
+			buttonText="Contact Us"
+		/>
 	</div>
 </template>
 
