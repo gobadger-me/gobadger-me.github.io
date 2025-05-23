@@ -73,9 +73,6 @@ function scrollToTop() {
 
 				<!-- Optional: Social Links -->
 				<v-col cols="12" md="6" class="d-flex justify-end" v-if="showSocial">
-					<v-btn icon variant="text" href="https://twitter.com" target="_blank">
-						<v-icon>mdi-twitter</v-icon>
-					</v-btn>
 					<v-btn
 						icon
 						variant="text"
