@@ -68,7 +68,7 @@ function scrollToTop() {
 			<!-- Bottom Row -->
 			<v-row class="mt-8 justify-space-between align-center">
 				<v-col cols="12" md="6" class="text-caption">
-					&copy; {{ new Date().getFullYear() }} Badger Inc. All rights reserved.
+					&copy; {{ new Date().getFullYear() }} GoBadger LLC. All rights reserved.
 				</v-col>
 
 				<!-- Optional: Social Links -->
