@@ -20,6 +20,10 @@ const props = defineProps({
 		default: "Sed Do",
 	},
 });
+
+function scrollToTop() {
+	window.scrollTo({ top: 0, behavior: "smooth" });
+}
 </script>
 
 <!-- ****************** Template **************** -->
@@ -34,7 +38,7 @@ const props = defineProps({
 					<p class="text-subtitle-1 mb-6">
 						{{ props.subtitle }}
 					</p>
-					<v-btn color="primary" size="large" :to="props.linkTo">
+					<v-btn color="primary" size="large" :to="props.linkTo" @click="scrollToTop">
 						{{ props.buttonText }}
 					</v-btn>
 				</v-col>
