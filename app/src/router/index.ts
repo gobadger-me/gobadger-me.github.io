@@ -8,7 +8,7 @@ import LegalAcceptableUseView from "@/views/LegalAcceptableUseView.vue";
 import LegalDisclaimerView from "@/views/LegalDisclaimerView.vue";
 
 const router = createRouter({
-//	history: createWebHistory(import.meta.env.BASE_URL),
+	//	history: createWebHistory(import.meta.env.BASE_URL),
 	history: createWebHashHistory(),
 	routes: [
 		{
