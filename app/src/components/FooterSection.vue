@@ -6,7 +6,7 @@ const companyLinks = [
 	{ label: "Home", to: "/" },
 	//	{ label: "Solutions", to: "/solutions" },
 	//	{ label: "About", to: "/about" },
-	//	{ label: "Careers", to: "/careers" },
+	{ label: "Careers", to: "/careers" },
 	{ label: "Contact", to: "/contact" },
 	//	{ label: "Blog", to: "/blog" },
 ];
