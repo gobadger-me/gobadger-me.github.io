@@ -1,6 +1,6 @@
 <!-- ****************** Script ****************** -->
 <script setup lang="ts">
-import { ref, useSlots } from "vue";
+import { ref } from "vue";
 
 const expanded = ref(false);
 const toggle = () => {
@@ -29,12 +29,12 @@ const toggle = () => {
 <style scoped lang="scss">
 .job-card {
 	margin-bottom: 16px;
-	cursor: pointer;
 }
 
 .card-header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	cursor: pointer;
 }
 </style>
