@@ -22,7 +22,7 @@ import JobListing from "@/components/JobListing.vue";
 		</HeroSection>
 
 		<!-- Opportunities -->
-		<JobOpportunities class="mt-8" id="opportunities">
+		<JobOpportunities class="my-8" id="opportunities">
 			<JobListing>
 				<template #title>Front-end Web Development Internship</template>
 				<template #content>
