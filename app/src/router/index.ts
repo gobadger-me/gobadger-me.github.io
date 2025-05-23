@@ -8,6 +8,8 @@ import LegalPrivacyPolicyView from "@/views/LegalPrivacyPolicyView.vue";
 import LegalAcceptableUseView from "@/views/LegalAcceptableUseView.vue";
 import LegalDisclaimerView from "@/views/LegalDisclaimerView.vue";
 
+import NotFound from "@/views/NotFound.vue";
+
 const router = createRouter({
 	//	history: createWebHistory(import.meta.env.BASE_URL),
 	history: createWebHashHistory(),
@@ -46,6 +48,11 @@ const router = createRouter({
 			path: "/disclaimer",
 			name: "disclaimer",
 			component: LegalDisclaimerView,
+		},
+		{
+			path: "/:pathMatch(.*)*",
+			name: "NotFound",
+			component: NotFound,
 		},
 	],
 });
