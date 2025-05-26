@@ -5,7 +5,7 @@ import { ref, onMounted, onBeforeUnmount } from "vue";
 
 const navLinks = [
 	{ text: "Home", href: "/" },
-	//	{ text: "Features", href: "/features" },
+	{ text: "Solutions", href: "/solutions" },
 	//	{ text: "Pricing", href: "/pricing" },
 	//	{ text: "About", href: "/about" },
 ];
