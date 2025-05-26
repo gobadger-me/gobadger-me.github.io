@@ -6,9 +6,9 @@ import { ref, onMounted, onBeforeUnmount } from "vue";
 const navLinks = [
 	{ text: "Home", href: "/" },
 	{ text: "About", href: "/about" },
-	{ text: "Products", href: "/products" },
-	{ text: "Solutions", href: "/solutions" },
-	{ text: "Resources", href: "/resources" },
+//	{ text: "Products", href: "/products" },
+//	{ text: "Solutions", href: "/solutions" },
+//	{ text: "Resources", href: "/resources" },
 ];
 
 const isScrolled = ref(false);
@@ -42,14 +42,28 @@ function scrollToTop() {
 		scroll-threshold="10"
 		app
 	>
-		<router-link to="/" class="ml-6 px-2 d-inline-block" style="max-width: 150px" @click="scrollToTop">
+		<router-link
+			to="/"
+			class="ml-6 px-2 d-inline-block"
+			style="max-width: 150px"
+			@click="scrollToTop"
+		>
 			<img :src="logo" alt="GoBadger Logo" style="width: 100%" />
 		</router-link>
 		<v-spacer />
-		<v-btn text class="mx-2" v-for="link in navLinks" :key="link.text" :to="link.href" @click="scrollToTop">
+		<v-btn
+			text
+			class="mx-2"
+			v-for="link in navLinks"
+			:key="link.text"
+			:to="link.href"
+			@click="scrollToTop"
+		>
 			{{ link.text }}
 		</v-btn>
-		<v-btn color="primary" class="ml-4 mr-6" rounded to="/contact" @click="scrollToTop"> Get Started </v-btn>
+		<v-btn color="primary" class="ml-4 mr-6" rounded to="/contact" @click="scrollToTop">
+			Get Started
+		</v-btn>
 	</v-app-bar>
 </template>
 

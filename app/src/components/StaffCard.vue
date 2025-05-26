@@ -49,6 +49,6 @@ v-card:hover {
 }
 
 .bio {
-  white-space: pre-line;
+	white-space: pre-line;
 }
 </style>
