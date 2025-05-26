@@ -37,6 +37,7 @@ const props = defineProps({
 						max-height="400"
 						class="mx-auto"
 						cover
+						eager
 					/>
 				</v-col>
 			</v-row>
