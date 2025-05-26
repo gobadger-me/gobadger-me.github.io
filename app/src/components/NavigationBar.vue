@@ -5,9 +5,10 @@ import { ref, onMounted, onBeforeUnmount } from "vue";
 
 const navLinks = [
 	{ text: "Home", href: "/" },
+	{ text: "About", href: "/about" },
+	{ text: "Products", href: "/products" },
 	{ text: "Solutions", href: "/solutions" },
-	//	{ text: "Pricing", href: "/pricing" },
-	//	{ text: "About", href: "/about" },
+	{ text: "Resources", href: "/resources" },
 ];
 
 const isScrolled = ref(false);

@@ -1,7 +1,10 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 
 import HomeView from "@/views/HomeView.vue";
+import AboutView from "@/views/AboutView.vue";
+import ProductsView from "@/views/ProductsView.vue";
 import SolutionsView from "@/views/SolutionsView.vue";
+import ResourcesView from "@/views/ResourcesView.vue";
 import ContactView from "@/views/ContactView.vue";
 
 import CareersView from "@/views/CareersView.vue";
@@ -22,9 +25,24 @@ const router = createRouter({
 			component: HomeView,
 		},
 		{
+			path: "/about",
+			name: "about",
+			component: AboutView,
+		},
+		{
+			path: "/products",
+			name: "products",
+			component: ProductsView,
+		},
+		{
 			path: "/solutions",
 			name: "solutions",
 			component: SolutionsView,
+		},
+		{
+			path: "/resources",
+			name: "resources",
+			component: ResourcesView,
 		},
 		{
 			path: "/contact",
