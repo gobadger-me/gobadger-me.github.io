@@ -7,8 +7,6 @@ const navLinks = [
 	{ text: "Home", href: "/" },
 	{ text: "About", href: "/about" },
 	{ text: "Products", href: "/products" },
-	//	{ text: "Solutions", href: "/solutions" },
-	//	{ text: "Resources", href: "/resources" },
 ];
 
 const isScrolled = ref(false);

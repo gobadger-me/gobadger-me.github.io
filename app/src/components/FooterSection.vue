@@ -6,10 +6,8 @@ const companyLinks = [
 	{ label: "Home", to: "/" },
 	{ label: "About", to: "/about" },
 	{ label: "Products", to: "/products" },
-	//	{ label: "Solutions", to: "/solutions" },
 	{ label: "Careers", to: "/careers" },
 	{ label: "Contact", to: "/contact" },
-	//	{ label: "Blog", to: "/blog" },
 ];
 
 const legalLinks = [
