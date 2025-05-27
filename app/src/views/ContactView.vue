@@ -8,6 +8,7 @@ const form = ref({
 	email: "",
 	company: "",
 	message: "",
+	scheduleDemo: false,
 });
 
 const success = ref(false);
@@ -30,6 +31,7 @@ async function submitForm() {
 				email: form.value.email,
 				company: form.value.company,
 				message: form.value.message,
+				scheduleDemo: form.value.scheduleDemo,
 			}),
 		});
 
@@ -42,6 +44,7 @@ async function submitForm() {
 				email: "",
 				company: "",
 				message: "",
+				scheduleDemo: false,
 			};
 		} else {
 			throw new Error("Submission failed");
@@ -96,6 +99,7 @@ async function submitForm() {
 						<v-text-field v-model="form.email" label="Email Address" type="email" required />
 						<v-text-field v-model="form.company" label="Company" />
 						<v-textarea v-model="form.message" label="Message" rows="5" required />
+						<v-checkbox v-model="form.scheduleDemo" label="I want to schedule a demo." />
 						<v-btn color="primary" type="submit" class="mt-4" large>Submit</v-btn>
 
 						<v-alert v-if="success" type="success" class="mt-8">
