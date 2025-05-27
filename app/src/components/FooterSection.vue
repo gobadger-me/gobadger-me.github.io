@@ -4,8 +4,9 @@ const showSocial = true;
 
 const companyLinks = [
 	{ label: "Home", to: "/" },
-	//	{ label: "Solutions", to: "/solutions" },
 	{ label: "About", to: "/about" },
+	{ label: "Products", to: "/products" },
+	//	{ label: "Solutions", to: "/solutions" },
 	{ label: "Careers", to: "/careers" },
 	{ label: "Contact", to: "/contact" },
 	//	{ label: "Blog", to: "/blog" },
