@@ -4,6 +4,7 @@ import HeroSection from "@/components/HeroSection.vue";
 import ProblemStatement from "@/components/ProblemStatement.vue";
 import ProblemRow from "@/components/ProblemRow.vue";
 import FeatureBlock from "@/components/FeatureBlock.vue";
+import ProductsOverview from "@/components/ProductsOverview.vue";
 import CallToAction from "@/components/CallToAction.vue";
 
 import bgImg from "@/assets/img/background.png";
@@ -155,6 +156,8 @@ import besPreviewImg from "@/assets/img/bes-preview.jpg";
 				people.
 			</p>
 		</FeatureBlock>
+
+		<ProductsOverview goToLink="/products" />
 
 		<!-- Call to Action -->
 		<CallToAction

@@ -2,6 +2,9 @@
 <script setup lang="ts">
 import { defineProps } from "vue";
 
+import { useRouter } from "vue-router";
+const router = useRouter();
+
 const props = defineProps({
 	title: {
 		type: String,
@@ -27,19 +30,31 @@ const props = defineProps({
 		type: String,
 		default: "",
 	},
+	goToLink: {
+		// if defined, go to this link instead of the anchor.
+		type: String,
+		default: "",
+	},
 });
 
 function scrollToAnchor(anchorId: string) {
+	if (props.goToLink) {
+		router.push(props.goToLink);
+		return;
+	}
 	const el = document.getElementById(anchorId);
 	if (el) {
-		const yOffset = -80; // Adjust this to match your header height
+		const yOffset = -80;
 		const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
-
 		window.scrollTo({ top: y, behavior: "smooth" });
 	}
 }
 
 function scrollToParentAnchor() {
+	if (props.goToLink) {
+		router.push(props.goToLink);
+		return;
+	}
 	if (props.parentAnchor) {
 		scrollToAnchor(props.parentAnchor);
 	}
