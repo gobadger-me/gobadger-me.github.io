@@ -32,9 +32,9 @@ const productCategories = [
 		icon: "mdi-card-account-details",
 		color: "deep-orange-darken-3",
 		items: [
-			{ label: "PVC, PCB, and/or Paper Badges", anchor: "badges" },
-			{ label: "Bx Scanner Rentals", anchor: "scanner-rentals" },
-			{ label: "Lanyards and Accessories", anchor: "lanyards" },
+			{ label: "PVC, PCB, and Paper Badges", anchor: "badges" },
+			{ label: "Bx Scanner Rentals", anchor: "bx-scanner-rentals" },
+			{ label: "Lanyards and Accessories", anchor: "lanyards-and-accessories" },
 		],
 		parentAnchor: "section-badge",
 	},

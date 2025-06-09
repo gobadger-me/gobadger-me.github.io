@@ -55,6 +55,7 @@ function toggle() {
 							contain
 							class="rounded"
 							max-height="200"
+							eager
 						/>
 					</v-col>
 

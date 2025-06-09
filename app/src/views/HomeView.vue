@@ -11,6 +11,10 @@ import bgImg from "@/assets/img/background.png";
 import emiBrowserImg from "@/assets/img/emi-browser.png";
 import bxScannerImg from "@/assets/img/bx-scanner.png";
 import besPreviewImg from "@/assets/img/bes-preview.jpg";
+
+function scrollToTop() {
+	window.scrollTo({ top: 0, behavior: "smooth" });
+}
 </script>
 
 <!-- ****************** Template **************** -->
@@ -158,6 +162,13 @@ import besPreviewImg from "@/assets/img/bes-preview.jpg";
 		</FeatureBlock>
 
 		<ProductsOverview goToLink="/products" />
+		<v-container class="mb-16 mt-4">
+			<v-row justify="center">
+				<v-btn color="primary" size="large" to="/products" @click="scrollToTop">
+					Explore Products
+				</v-btn>
+			</v-row>
+		</v-container>
 
 		<!-- Call to Action -->
 		<CallToAction
