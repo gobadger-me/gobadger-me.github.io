@@ -163,7 +163,7 @@ import CallToAction from "@/components/CallToAction.vue";
 					class="my-4"
 					title="Engagement Support"
 					:initiallyExpanded="true"
-					imageSrc="/promo/bwc.jpg"
+					imageSrc="/promo/engagement-support.jpg"
 				>
 					<p>
 						With every engagement, the Badger team will work with you to ensure that your Badger
@@ -178,7 +178,7 @@ import CallToAction from "@/components/CallToAction.vue";
 					class="my-4"
 					title="Online Event Support"
 					:initiallyExpanded="true"
-					imageSrc="/promo/bwc.jpg"
+					imageSrc="/promo/online-support.jpg"
 				>
 					<p>
 						Receive dedicated online support for the entire duration of your event. Our team is on
@@ -192,7 +192,7 @@ import CallToAction from "@/components/CallToAction.vue";
 					class="my-4"
 					title="On-site Event Support"
 					:initiallyExpanded="true"
-					imageSrc="/promo/bwc.jpg"
+					imageSrc="/promo/onsite-support.jpg"
 				>
 					<p>
 						For larger events, Badger can provide on-site support to ensure your event's absolute
